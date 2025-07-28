@@ -169,7 +169,7 @@ header {
 }
 
 .logo img {
-    height: 40px; /* Ajusta el tamaño de tu logo.png */
+    height: 30px; /* Ajusta el tamaño de tu logo.png */
     width: auto;
     margin-right: 10px; /* Espacio entre el logo y el texto (si se muestra) */
 }
