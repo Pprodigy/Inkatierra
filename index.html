@@ -8,43 +8,28 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header style="background-color: #ffffff; padding: 25px 0; border-bottom: 1px solid #e0e0e0; box-shadow: 0 4px 12px rgba(0,0,0,0.08); display: flex; justify-content: center; align-items: center;">
-    <div style="display: flex; align-items: center; justify-content: space-between; max-width: 1300px; width: 100%; padding: 0 40px;">
-        <a href="/" style="display: inline-block;">
-            <img src="inkatierra_logo.png" alt="Inkatierra" style="height: 65px; display: block;">
-        </a>
-        <nav>
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; font-family: 'Montserrat', sans-serif;">
-                <li style="margin-right: 40px;"><a href="#" style="text-decoration: none; color: #333; font-weight: 600; font-size: 17px; position: relative; transition: color 0.3s ease;">Inicio
-                    <span style="content: ''; position: absolute; left: 0; bottom: -5px; width: 0; height: 2px; background-color: #f7b300; transition: width 0.3s ease;"></span>
-                </a></li>
-                <li style="margin-right: 40px;"><a href="#" style="text-decoration: none; color: #333; font-weight: 600; font-size: 17px; position: relative; transition: color 0.3s ease;">Nosotros
-                    <span style="content: ''; position: absolute; left: 0; bottom: -5px; width: 0; height: 2px; background-color: #f7b300; transition: width 0.3s ease;"></span>
-                </a></li>
-                <li style="margin-right: 40px;"><a href="#" style="text-decoration: none; color: #333; font-weight: 600; font-size: 17px; position: relative; transition: color 0.3s ease;">Servicios
-                    <span style="content: ''; position: absolute; left: 0; bottom: -5px; width: 0; height: 2px; background-color: #f7b300; transition: width 0.3s ease;"></span>
-                </a></li>
-                <li><a href="#" style="text-decoration: none; color: #333; font-weight: 600; font-size: 17px; position: relative; transition: color 0.3s ease;">Contacto
-                    <span style="content: ''; position: absolute; left: 0; bottom: -5px; width: 0; height: 2px; background-color: #f7b300; transition: width 0.3s ease;"></span>
-                </a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<style>
-/* Estilos adicionales para los efectos hover */
-nav ul li a:hover {
-    color: #f7b300 !important; /* Color de resaltado al pasar el mouse */
-}
-
-nav ul li a:hover span {
-    width: 100% !important; /* La línea se expande al pasar el mouse */
-}
-</style>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+    <img src="img/logo.png" alt="Logo Inkatierra">
+    <h1>Inkatierra</h1> 
+</a>
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="terrenos.html">Terrenos</a></li>
+        <li><a href="sobre-nosotros.html">Nosotros</a></li>
+        <li><a href="vender-terreno.html">¿Quieres Vender?</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
 
     <main>
         <section class="hero">
