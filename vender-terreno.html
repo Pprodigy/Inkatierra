@@ -1,1 +1,243 @@
-<!-- Contenido de vender-terreno.html aquí -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vender Tu Terreno | TuTerrenoIdeal</title>
+    <meta name="description" content="¿Quieres vender tu terreno? Completa nuestro formulario y te ayudaremos a encontrar un comprador.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Logo Venta de Terrenos">
+                <h1>TuTerrenoIdeal</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="terrenos.html">Terrenos</a></li>
+                    <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                    <li><a href="vender-terreno.html" class="active">¿Quieres Vender?</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                <div class="contact-header">
+                    <a href="tel:+51916999032" class="btn-call"><i class="fas fa-phone-alt"></i> Llámanos</a>
+                    <a href="https://wa.me/51916999032" target="_blank" class="btn-whatsapp-header"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="sell-page">
+        <section class="hero-subpage" style="background-image: url('img/hero-sell.jpg');">
+            <div class="overlay"></div>
+            <div class="container">
+                <h2>Vende Tu Terreno Fácil y Rápido</h2>
+                <p>Confía en expertos para encontrar al comprador ideal para tu propiedad.</p>
+            </div>
+        </section>
+
+        <section class="sell-process-section">
+            <div class="container">
+                <h2>¿Cómo Funciona?</h2>
+                <div class="process-steps">
+                    <div class="step-card">
+                        <i class="fas fa-file-alt icon-large"></i>
+                        <h3>1. Completa el Formulario</h3>
+                        <p>Dinos los detalles de tu terreno y tu información de contacto.</p>
+                    </div>
+                    <div class="step-card">
+                        <i class="fas fa-phone-volume icon-large"></i>
+                        <h3>2. Te Contactamos</h3>
+                        <p>Nuestro equipo revisará tu información y te llamará para una evaluación.</p>
+                    </div>
+                    <div class="step-card">
+                        <i class="fas fa-handshake icon-large"></i>
+                        <h3>3. ¡Vendemos Tu Terreno!</h3>
+                        <p>Nos encargamos de la promoción y el proceso de venta de tu propiedad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sell-form-section">
+            <div class="container">
+                <h2>Datos de Tu Terreno</h2>
+                <p>Por favor, proporciónanos la información más detallada posible para ayudarte mejor.</p>
+                <form id="sell-terrain-form" class="simple-form">
+                    <h3>Tu Información de Contacto</h3>
+                    <div class="form-group">
+                        <label for="seller-name">Nombre Completo:</label>
+                        <input type="text" id="seller-name" name="sellerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="seller-email">Correo Electrónico:</label>
+                        <input type="email" id="seller-email" name="sellerEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="seller-phone">Teléfono de Contacto:</label>
+                        <input type="tel" id="seller-phone" name="sellerPhone" required>
+                    </div>
+
+                    <h3>Información del Terreno</h3>
+                    <div class="form-group">
+                        <label for="terrain-region">Región:</label>
+                        <input type="text" id="terrain-region" name="terrainRegion" required placeholder="Ej. Junín">
+                    </div>
+                    <div class="form-group">
+                        <label for="terrain-province">Provincia:</label>
+                        <input type="text" id="terrain-province" name="terrainProvince" required placeholder="Ej. Satipo">
+                    </div>
+                    <div class="form-group">
+                        <label for="terrain-district">Distrito:</label>
+                        <input type="text" id="terrain-district" name="terrainDistrict" required placeholder="Ej. Coviriali">
+                    </div>
+                    <div class="form-group">
+                        <label for="terrain-address">Dirección Aproximada (opcional):</label>
+                        <input type="text" id="terrain-address" name="terrainAddress" placeholder="Ej. Jr. Los Rosales 456">
+                    </div>
+                    <div class="form-group">
+                        <label for="terrain-sqm">Cantidad de Metros Cuadrados (m²):</label>
+                        <input type="number" id="terrain-sqm" name="terrainSqm" required min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="terrain-type">Tipo de Terreno:</label>
+                        <select id="terrain-type" name="terrainType" required>
+                            <option value="">Selecciona un tipo</option>
+                            <option value="urbano">Terreno Urbano</option>
+                            <option value="rustico">Terreno Rústico</option>
+                            <option value="chacra">Chacra</option>
+                            <option value="con-casa">Con Construcción Existente</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="terrain-description">Descripción Detallada del Terreno:</label>
+                        <textarea id="terrain-description" name="terrainDescription" rows="7" required placeholder="Describe las características del terreno, si tiene agua, luz, acceso, tipo de suelo, etc."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="terrain-documents">Documentos con los que cuenta (ej. Título de Propiedad, Partida Registral):</label>
+                        <textarea id="terrain-documents" name="terrainDocuments" rows="3" required placeholder="Ej. Título de Propiedad, Partida Registral, DNI del Propietario."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar Datos de Mi Terreno</button>
+                    <p class="form-message" id="sell-form-message"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col about-company">
+                <h3>TuTerrenoIdeal</h3>
+                <p>Tu socio confiable para la compra y venta de terrenos en Perú. Te acompañamos en cada paso.</p>
+                <div class="social-icons">
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col quick-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="terrenos.html">Terrenos</a></li>
+                    <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="vender-terreno.html">Vender Terreno</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-info">
+                <h3>Contáctanos</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección de la Oficina, Ciudad, País</p>
+                <p><i class="fas fa-phone-alt"></i> <a href="tel:+51916999032">+51 916 999 032</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@tuterrenoideal.com">info@tuterrenoideal.com</a></p>
+            </div>
+            <div class="footer-col newsletter">
+                <h3>Newsletter</h3>
+                <p>Suscríbete para recibir nuestras últimas ofertas y noticias.</p>
+                <form>
+                    <input type="email" placeholder="Tu correo electrónico">
+                    <button type="submit" class="btn-secondary">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 TuTerrenoIdeal. Todos los derechos reservados.</p>
+                <p>
+                    <a href="#">Política de Privacidad</a> | 
+                    <a href="#">Términos y Condiciones</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/51916999032" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sellTerrainForm = document.getElementById('sell-terrain-form');
+            const sellFormMessage = document.getElementById('sell-form-message');
+
+            sellTerrainForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                sellFormMessage.textContent = 'Enviando...';
+                sellFormMessage.className = 'form-message'; // Reset class
+
+                const formData = new FormData(sellTerrainForm);
+                const data = Object.fromEntries(formData.entries());
+
+                // ¡IMPORTANTE PARA GITHUB PAGES!
+                // Para enviar a un correo electrónico (gerardo2cpp@gmail.com),
+                // necesitas un servicio de terceros. GitHub Pages es estático.
+                // Opciones populares:
+                // 1. Formspree.io: Configura un formulario, obtén un endpoint, y envía los datos allí.
+                //    https://formspree.io/
+                // 2. Netlify Forms / Vercel Forms: Si usas estos servicios para el hosting, tienen funcionalidades de formulario.
+                // 3. EmailJS: Envía correos directamente desde el frontend usando un servicio de retransmisión.
+                //    https://www.emailjs.com/
+
+                // Ejemplo con Formspree (el más sencillo para estáticos):
+                // Necesitas crear un formulario en Formspree.io y obtener el código de tu formulario.
+                const formspreeEndpoint = 'https://formspree.io/f/mqkvgndq'; // <<-- ¡REEMPLAZA ESTE CÓDIGO CON EL TUYO DE FORMSPREE!
+
+                try {
+                    const response = await fetch(formspreeEndpoint, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    });
+
+                    if (response.ok) {
+                        sellFormMessage.textContent = '¡Gracias! La información de tu terreno ha sido enviada. Nos pondremos en contacto contigo pronto para evaluar tu propiedad.';
+                        sellFormMessage.classList.add('success');
+                        sellTerrainForm.reset();
+                    } else {
+                        const errorData = await response.json();
+                        sellFormMessage.textContent = `Hubo un error al enviar tu información: ${errorData.errors ? errorData.errors[0].message : 'Por favor, inténtalo de nuevo.'}`;
+                        sellFormMessage.classList.add('error');
+                    }
+                } catch (error) {
+                    console.error('Error al enviar el formulario:', error);
+                    sellFormMessage.textContent = 'Hubo un error de conexión al enviar tu información. Por favor, revisa tu conexión e inténtalo de nuevo.';
+                    sellFormMessage.classList.add('error');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
