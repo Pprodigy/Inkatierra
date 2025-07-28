@@ -142,65 +142,94 @@ section {
 
 
 /* Header */
+/* Estilos para el encabezado general */
 header {
-    background-color: var(--color-white);
-    padding: var(--spacing-sm) 0;
-    box-shadow: var(--shadow-light);
-    position: sticky;
+    background-color: #ffffff; /* Fondo blanco para un aspecto limpio */
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Sombra sutil para profundidad */
+    position: sticky; /* Encabezado pegajoso al hacer scroll */
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    max-width: 1200px; /* Ancho máximo para centrar el contenido */
+    margin: 0 auto;
+    padding: 0 20px; /* Espaciado lateral */
 }
 
 .logo {
     display: flex;
     align-items: center;
-    color: var(--color-text-dark);
-    font-weight: bold;
-    font-size: 1.5rem;
     text-decoration: none;
-    flex-shrink: 0; /* Evita que el logo se encoja */
+    color: #333; /* Color de texto si se muestra */
 }
 
 .logo img {
-    height: 40px; /* Tamaño del logo */
-    margin-right: 10px;
+    height: 50px; /* Ajusta el tamaño de tu logo.png */
+    width: auto;
+    margin-right: 10px; /* Espacio entre el logo y el texto (si se muestra) */
+}
+
+.logo h1 {
+    font-size: 28px; /* Tamaño del texto del logo */
+    font-weight: 700;
+    color: #333; /* Un color oscuro para contraste */
+    /* Para ocultar el h1 y usar solo el PNG como logo principal */
+    text-indent: -9999px; /* Oculta el texto visualmente */
+    line-height: 0; /* Elimina la altura de línea */
+    font-size: 0; /* Elimina el tamaño de fuente */
+    overflow: hidden; /* Asegura que no se vea nada */
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-lg); /* Espacio entre los ítems del menú */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Para poner los elementos del menú en línea */
+}
+
+nav ul li {
+    margin-left: 30px; /* Espacio entre cada elemento del menú */
 }
 
 nav ul li a {
-    color: var(--color-text-dark);
+    text-decoration: none;
+    color: #555; /* Color de los enlaces */
     font-weight: 600;
-    padding: 0.5rem 0;
-    position: relative;
+    font-size: 16px;
+    padding: 5px 0;
+    transition: color 0.3s ease-in-out;
+    position: relative; /* Para el efecto de subrayado al pasar el ratón */
 }
 
+nav ul li a:hover {
+    color: #007bff; /* Color al pasar el ratón */
+}
+
+/* Efecto de subrayado al pasar el ratón */
 nav ul li a::after {
     content: '';
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: var(--color-primary);
     bottom: -5px;
     left: 0;
-    transition: width 0.3s ease;
+    background-color: #007bff; /* Color del subrayado */
+    transition: width 0.3s ease-in-out;
 }
 
 nav ul li a:hover::after,
-nav ul li a.active::after {
+nav ul li a.active::after { /* Mantener el subrayado en la página activa */
     width: 100%;
+}
+
+/* Ocultar el contact-header que ya no existe en el HTML */
+.contact-header {
+    display: none;
 }
 
 .contact-header {
