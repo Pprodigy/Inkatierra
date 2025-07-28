@@ -9,9 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.querySelector('i').classList.toggle('fa-times');
     });
 
+    // Ocultar menú cuando se hace clic en un enlace (para móviles)
     nav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-            if (window.innerWidth <= 992) {
+            if (window.innerWidth <= 992) { // Asumiendo 992px como breakpoint para móvil
                 nav.classList.remove('active');
                 menuToggle.querySelector('i').classList.remove('fa-times');
                 menuToggle.querySelector('i').classList.add('fa-bars');
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ---- Carrusel de la Página de Inicio ----
     const carouselItems = document.querySelectorAll('.hero-carousel .carousel-item');
     const prevButton = document.querySelector('.hero-carousel + .carousel-nav .prev');
     const nextButton = document.querySelector('.hero-carousel + .carousel-nav .next');
@@ -44,26 +46,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (carouselItems.length > 0) {
-        showSlide(currentSlide);
-        let slideInterval = setInterval(nextSlide, 5000);
+        showSlide(currentSlide); // Mostrar el primer slide al cargar
 
+        // Autoplay del carrusel
+        let slideInterval = setInterval(nextSlide, 5000); // Cambia de slide cada 5 segundos
+
+        // Pausar autoplay al interactuar con el carrusel
         prevButton.addEventListener('click', () => {
             clearInterval(slideInterval);
             prevSlide();
-            slideInterval = setInterval(nextSlide, 5000);
+            slideInterval = setInterval(nextSlide, 5000); // Reiniciar autoplay
         });
 
         nextButton.addEventListener('click', () => {
             clearInterval(slideInterval);
             nextSlide();
-            slideInterval = setInterval(nextSlide, 5000);
+            slideInterval = setInterval(nextSlide, 5000); // Reiniciar autoplay
         });
 
+        // Pausar autoplay al pasar el mouse por el hero
         const heroSection = document.querySelector('.hero');
         heroSection.addEventListener('mouseenter', () => clearInterval(slideInterval));
         heroSection.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, 5000));
     }
 
+
+    // ---- Lógica de la barra de búsqueda en el Home (simulada) ----
     const homeSearchForm = document.getElementById('home-search-form');
     if (homeSearchForm) {
         homeSearchForm.addEventListener('submit', (e) => {
@@ -73,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const minSqm = document.getElementById('search-min-sqm').value;
             const maxSqm = document.getElementById('search-max-sqm').value;
 
+            // Construir la URL para terrenos.html con los parámetros de búsqueda
             let queryParams = [];
             if (location) queryParams.push(`location=${encodeURIComponent(location)}`);
             if (type) queryParams.push(`type=${encodeURIComponent(type)}`);
@@ -84,10 +93,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
+    // ---- Carga de Terrenos Destacados en el Home ----
     const featuredTerrainsContainer = document.getElementById('featured-terrains');
     if (featuredTerrainsContainer && typeof terrenosData !== 'undefined') {
-        const featuredCount = 4;
-        const shuffledTerrains = terrenosData.sort(() => 0.5 - Math.random());
+        const featuredCount = 4; // Mostrar 4 terrenos destacados
+        const shuffledTerrains = terrenosData.sort(() => 0.5 - Math.random()); // Mezclar para variar
         const selectedFeatured = shuffledTerrains.slice(0, featuredCount);
 
         selectedFeatured.forEach(terrain => {
