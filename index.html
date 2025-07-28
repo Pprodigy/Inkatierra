@@ -2,9 +2,171 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Inicio - Tu Terreno Ideal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Terrenos | Encuentra tu Propiedad Ideal</title>
+    <meta name="description" content="Encuentra los mejores terrenos para tu proyecto en nuestra plataforma profesional de venta de propiedades.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Contenido de index.html aquí -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Logo Venta de Terrenos">
+                <h1>TuTerrenoIdeal</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="terrenos.html">Terrenos</a></li>
+                    <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                    <li><a href="vender-terreno.html">¿Quieres Vender?</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                <div class="contact-header">
+                    <a href="tel:+51916999032" class="btn-call"><i class="fas fa-phone-alt"></i> Llámanos</a>
+                    <a href="https://wa.me/51916999032" target="_blank" class="btn-whatsapp-header"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-carousel">
+                <div class="carousel-item active" style="background-image: url('img/hero-1.jpg');">
+                    <div class="overlay"></div>
+                    <div class="container hero-text">
+                        <h2>El Terreno de Tus Sueños Te Espera</h2>
+                        <p>Descubre propiedades únicas para construir el futuro que imaginas.</p>
+                        <a href="terrenos.html" class="btn-primary">Explorar Terrenos</a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('img/hero-2.jpg');">
+                    <div class="overlay"></div>
+                    <div class="container hero-text">
+                        <h2>Invierte en la Tierra del Mañana</h2>
+                        <p>Encuentra oportunidades de inversión con alto potencial de crecimiento.</p>
+                        <a href="terrenos.html" class="btn-primary">Ver Oportunidades</a>
+                    </div>
+                </div>
+                </div>
+            <div class="carousel-nav">
+                <button class="prev" aria-label="Anterior">&#10094;</button>
+                <button class="next" aria-label="Siguiente">&#10095;</button>
+            </div>
+        </section>
+
+        <section class="search-bar-home">
+            <div class="container">
+                <h3>Encuentra tu Terreno Ideal</h3>
+                <form id="home-search-form">
+                    <input type="text" id="search-location" placeholder="Región, Provincia, Distrito...">
+                    <select id="search-type">
+                        <option value="">Tipo de Terreno</option>
+                        <option value="urbano">Terreno Urbano</option>
+                        <option value="rustico">Terreno Rústico</option>
+                        <option value="chacra">Chacra</option>
+                        <option value="con-casa">Con Construcción</option>
+                    </select>
+                    <input type="number" id="search-min-sqm" placeholder="Mín. m²">
+                    <input type="number" id="search-max-sqm" placeholder="Máx. m²">
+                    <button type="submit" class="btn-secondary">Buscar</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="featured-properties">
+            <div class="container">
+                <h2>Terrenos Destacados</h2>
+                <div class="property-grid" id="featured-terrains">
+                    </div>
+                <div class="text-center">
+                    <a href="terrenos.html" class="btn-primary-outline">Ver Todos los Terrenos</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-summary">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Sobre Nosotros</h2>
+                        <p>En **TuTerrenoIdeal** nos dedicamos a conectar compradores con propiedades de ensueño. Con años de experiencia en el mercado, te garantizamos un proceso de compra transparente y seguro, acompañándote en cada paso para que encuentres la inversión perfecta para tu futuro.</p>
+                        <a href="sobre-nosotros.html" class="btn-secondary">Conoce Más</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="img/about-home.jpg" alt="Equipo de TuTerrenoIdeal">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <div class="container">
+                <h2>¿Quieres Vender tu Terreno?</h2>
+                <p>Si tienes un terreno y deseas venderlo de forma rápida y segura, nosotros te ayudamos.</p>
+                <a href="vender-terreno.html" class="btn-primary">¡Vende con Nosotros!</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col about-company">
+                <h3>TuTerrenoIdeal</h3>
+                <p>Tu socio confiable para la compra y venta de terrenos en Perú. Te acompañamos en cada paso.</p>
+                <div class="social-icons">
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col quick-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="terrenos.html">Terrenos</a></li>
+                    <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="vender-terreno.html">Vender Terreno</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-info">
+                <h3>Contáctanos</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección de la Oficina, Ciudad, País</p>
+                <p><i class="fas fa-phone-alt"></i> <a href="tel:+51916999032">+51 916 999 032</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@tuterrenoideal.com">info@tuterrenoideal.com</a></p>
+            </div>
+            <div class="footer-col newsletter">
+                <h3>Newsletter</h3>
+                <p>Suscríbete para recibir nuestras últimas ofertas y noticias.</p>
+                <form>
+                    <input type="email" placeholder="Tu correo electrónico">
+                    <button type="submit" class="btn-secondary">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 TuTerrenoIdeal. Todos los derechos reservados.</p>
+                <p>
+                    <a href="#">Política de Privacidad</a> | 
+                    <a href="#">Términos y Condiciones</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/51916999032" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/data.js"></script>
 </body>
 </html>
