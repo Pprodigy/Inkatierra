@@ -694,7 +694,9 @@ footer {
     color: var(--color-white);
     text-align: center;
     position: relative;
-    margin-bottom: var(--spacing-xl);
+    /* Elimina o reduce este margin-bottom */
+    margin-bottom: 0; /* O un valor muy pequeño como var(--spacing-sm) si necesitas un mínimo */
+    padding-top: 0; /* Asegura que no haya un padding extra en la parte superior del hero */
 }
 
 .hero-subpage .overlay {
@@ -728,7 +730,9 @@ footer {
 
 /* Properties List Page */
 .properties-page .properties-list-section {
-    padding-top: var(--spacing-xl);
+    /* Eliminaremos o reduciremos este padding-top aquí */
+    /* ya que el container y el layout Flexbox manejarán mejor el espacio */
+    padding-top: var(--spacing-md); /* Reducir o ajustar según sea necesario */
 }
 
 .properties-layout {
@@ -738,14 +742,16 @@ footer {
 }
 
 .sidebar-filters {
-    flex: 0 0 280px; /* Ancho fijo para la sidebar */
+    flex: 0 0 280px;
     background-color: var(--color-white);
     padding: var(--spacing-md);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-light);
-    align-self: flex-start; /* Se pega arriba */
-    position: sticky; /* Sticky para la sidebar */
-    top: calc(80px + var(--spacing-md)); /* Altura del header + espacio */
+    align-self: flex-start;
+    position: sticky;
+    /* Ajusta este 'top' según la altura real de tu header o un valor seguro */
+    /* Por ejemplo, si tu header tiene ~80px de alto, 90px-100px suele funcionar bien */
+    top: 100px; /* Un valor fijo que funcione bien para la mayoría de alturas de header */
     z-index: 999;
 }
 
