@@ -99,6 +99,7 @@ section {
 .btn-primary:hover {
     background-color: var(--color-primary-dark);
     border-color: var(--color-primary-dark);
+    color: var(--color-white); /* ¡AÑADE ESTA LÍNEA! Asegura que el texto sea blanco en hover */
 }
 
 .btn-secondary {
