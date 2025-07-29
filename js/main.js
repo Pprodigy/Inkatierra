@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ---- Carga de Terrenos Destacados en el Home ----
     const featuredTerrainsContainer = document.getElementById('featured-terrains');
     if (featuredTerrainsContainer && typeof terrenosData !== 'undefined') {
-        const featuredCount = 4; // Mostrar 4 terrenos destacados
+        const featuredCount = 6; // Mostrar 4 terrenos destacados
         const shuffledTerrains = terrenosData.sort(() => 0.5 - Math.random()); // Mezclar para variar
         const selectedFeatured = shuffledTerrains.slice(0, featuredCount);
 
