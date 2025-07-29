@@ -228,6 +228,18 @@ nav ul li a.active::after { /* Mantener el subrayado en la página activa */
     width: 100%;
 }
 
+nav ul li a.active {
+    color: var(--color-secondary); /* Azul Cielo - O el color que desees para la página activa */
+    /* Si quieres un color diferente para la página activa, defínelo aquí.
+       Por ejemplo, var(--color-primary) si quieres verde, o simplemente #007bff */
+}
+
+/* Si quieres que la página activa no tenga hover ni cursor de puntero */
+nav ul li a.active:hover {
+    color: var(--color-secondary); /* Mantiene el color incluso al pasar el mouse por la página activa */
+    cursor: default; /* Cambia el cursor para indicar que no es clicable */
+}
+
 /* Ocultar el contact-header que ya no existe en el HTML */
 .contact-header {
     display: none;
