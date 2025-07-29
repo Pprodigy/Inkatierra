@@ -732,7 +732,7 @@ footer {
 .properties-page .properties-list-section {
     /* Eliminaremos o reduciremos este padding-top aquí */
     /* ya que el container y el layout Flexbox manejarán mejor el espacio */
-    padding-top: var(--spacing-md); /* Reducir o ajustar según sea necesario */
+    padding-top: 0; /* Reducir o ajustar según sea necesario */
 }
 
 .properties-layout {
