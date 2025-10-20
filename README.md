@@ -1,2 +1,2 @@
 # Inkatierra
-Venta de terrenos
+Página web para venta de terrenos
